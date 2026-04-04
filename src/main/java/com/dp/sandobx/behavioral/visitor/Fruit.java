@@ -1,6 +1,7 @@
 package com.dp.sandobx.behavioral.visitor;
 
 class Fruit implements ItemElement {
+
     private int pricePerKg;
     private int weight;
     private String name;
