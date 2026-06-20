@@ -1,10 +1,18 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package com.dp.sandobx.structural.flyweight;
 
-// ===== Flyweight =====
+/**
+ *
+ * @author endovelico
+ */
 class TreeType {
-    private String name;
-    private String color;
-    private String texture;
+
+    private final String name;        // intrinsic
+    private final String color;       // intrinsic
+    private final String texture;     // intrinsic
 
     public TreeType(String name, String color, String texture) {
         this.name = name;
@@ -12,7 +20,12 @@ class TreeType {
         this.texture = texture;
     }
 
-    public void display(int x, int y) {
-        System.out.println(name + " tree at (" + x + "," + y + ") with color " + color);
+    public void render(int x, int y) {
+        System.out.println(
+            "Rendering " + name +
+            " tree with color " + color +
+            " and texture " + texture +
+            " at (" + x + "," + y + ")"
+        );
     }
 }

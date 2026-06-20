@@ -1,10 +1,18 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package com.dp.sandobx.structural.flyweight;
 
-// ===== Context (Extrinsic State) =====
+/**
+ *
+ * @author endovelico
+ */
 class Tree {
-    private int x;
-    private int y;
-    private TreeType type; // intrinsic
+
+    private int x; // extrinsic
+    private int y; // extrinsic
+    private TreeType type; // shared flyweight
 
     public Tree(int x, int y, TreeType type) {
         this.x = x;
@@ -12,7 +20,7 @@ class Tree {
         this.type = type;
     }
 
-    public void display() {
-        type.display(x, y);
+    public void draw() {
+        type.render(x, y);
     }
 }
